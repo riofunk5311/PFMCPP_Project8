@@ -10,3 +10,4 @@ struct HighwayPatrol : Vehicle
 
     void pullOver( Vehicle* v, bool willArrest, Highway* h );
 };
+

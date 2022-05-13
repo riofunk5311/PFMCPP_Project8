@@ -12,9 +12,9 @@ void SemiTruck::pullOver()
     std::cout << name << ": Hello officer, Any problem?" << std::endl;
 }
 
-void SemiTruck::passLight()
+void SemiTruck::turnBlinkerOn()
 {
     setSpeed(65);
-    std::cout << name << " lower your beam light please" << std::endl;
+    std::cout << name << " is swiching the lane." << std::endl;
 }
 

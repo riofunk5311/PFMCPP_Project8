@@ -2,7 +2,7 @@
 
 #include "Vehicle.h"
 
-struct SemiTruck : public Vehicle
+struct SemiTruck : Vehicle
 {
     SemiTruck (const std::string& n);
     ~SemiTruck() override;
@@ -10,6 +10,6 @@ struct SemiTruck : public Vehicle
     SemiTruck& operator=(const SemiTruck&);
     
     void pullOver();
-    void passLight();
+    void turnBlinkerOn();
 };
 

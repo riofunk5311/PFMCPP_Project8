@@ -10,7 +10,6 @@ struct SemiTruck : public Vehicle
     SemiTruck& operator=(const SemiTruck&);
     
     void pullOver();
-    
     void passLight();
 };
 

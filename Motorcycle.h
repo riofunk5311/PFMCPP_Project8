@@ -17,3 +17,4 @@ struct Motorcycle : public Vehicle
 
     void setSpeed(int s) override;
 };
+

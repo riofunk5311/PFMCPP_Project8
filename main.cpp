@@ -1,4 +1,4 @@
-/*
+    /*
 
 Project 8: Part 1/1
 video: Chapter 4 Part 6
@@ -126,12 +126,25 @@ int main()
     /*
      construct 2 more Car instances via emplace_back.
      */
+
+    cars.emplace_back("Navigator");
+    cars.emplace_back("Deville");
     
     /*
      now reserve and emplace_back your Trucks and Motorcyles
      */
     
+    motorcycles.reserve(3);
     
+    motorcycles.emplace_back("Ninja");
+    motorcycles.emplace_back("CBR1000rr-r");
+    motorcycles.emplace_back("YZF-R6");
+    
+    trucks.reserve(3);
+    
+    trucks.emplace_back("F150");
+    trucks.emplace_back("Bronco");
+    trucks.emplace_back("El Camino");
     
     
     assert(false);

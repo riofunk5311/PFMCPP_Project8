@@ -2,10 +2,10 @@
 #include <iostream>
 #include <cassert>
 
-HighwayPatrol::HighwayPatrol() : Vehicle("HighwayPatrol")
-{
-
-}
+HighwayPatrol::HighwayPatrol() : Vehicle("HighwayPatrol") { }
+HighwayPatrol::~HighwayPatrol() = default;
+HighwayPatrol::HighwayPatrol (const HighwayPatrol&) = default;
+HighwayPatrol& HighwayPatrol::operator=(const HighwayPatrol&) = default;
 
 void HighwayPatrol::scanHighway(Highway* h)
 {

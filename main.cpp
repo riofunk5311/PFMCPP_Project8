@@ -1,4 +1,4 @@
-/*
+    /*
 
 Project 8: Part 1/1
 video: Chapter 4 Part 6
@@ -54,7 +54,12 @@ your task:
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <cassert>
+
+#include "Highway.h"
+#include "HighwayPatrol.h"
+#include "Car.h"
+#include "Motorcycle.h"
+#include "SemiTruck.h"
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -120,17 +125,32 @@ int main()
     /*
      construct 2 more Car instances via emplace_back.
      */
+
+    cars.emplace_back("Navigator");
+    cars.emplace_back("Deville");
     
     /*
      now reserve and emplace_back your Trucks and Motorcyles
      */
     
+    motorcycles.reserve(3);
     
+    motorcycles.emplace_back("Ninja");
+    motorcycles.emplace_back("CBR1000rr-r");
+    motorcycles.emplace_back("YZF-R6");
     
+    trucks.reserve(3);
     
-    assert(false);
+    trucks.emplace_back("F150");
+    trucks.emplace_back("Bronco");
+    trucks.emplace_back("El Camino");
+    
     //add the cars, motorcycles and trucks to the highway using range-based for() loops: for( element : vec ) { ... }
     //be careful to not accidentally make element copies when iterating.
+
+    for (auto& car : cars) { highway.addVehicle(&car); };
+    for (auto& motorcycle : motorcycles) { highway.addVehicle(&motorcycle); };
+    for (auto& truck : trucks) { highway.addVehicle(&truck); };
     
     HighwayPatrol cop;
     cop.scanHighway(&highway);
